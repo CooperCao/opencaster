@@ -40,9 +40,7 @@ class entitlement_management_message_section(Section):
         self.table_id_extension = 0xFFFF
 
         fmt = "!%ds" % (len(pl_bytes))
-        return pack(fmt,
-            pl_bytes
-            )
+        return pack(fmt,pl_bytes)
 
 ######################################################################
 class emm_loop_item(DVBobject):
@@ -51,6 +49,4 @@ class emm_loop_item(DVBobject):
     
         # pack program_loop_item
         fmt = "!H"
-	return pack(fmt,
-	    self.test,
-	)
+        return pack(fmt,self.test,)

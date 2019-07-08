@@ -93,8 +93,8 @@ class DVBobject:
         for byte in bytes:
             if i % BYTES_PER_LINE == 0:
                 if i: print             # start on a fresh line...
-                print "%04x " % i,
-            print "%02X" % ord(byte),
+                print ("%04x " % i,)
+            print ("%02X" % ord(byte),)
             i = i+1
         print                           # dump is done => NL
         
@@ -103,5 +103,5 @@ class DVBobject:
         if not self.__dict__:
             self.sample()
         self.dump()
-        print self
+        print(self)
 

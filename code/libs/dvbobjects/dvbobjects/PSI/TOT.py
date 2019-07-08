@@ -52,5 +52,5 @@ class time_offset_section(DVBobject):
 		return data + self.crc_32(data)
 	
 	def crc_32(self, data):
-		crc = crc32.CRC_32(data)
+		crc = crc32.CRC_32(data,len(data))
 		return pack("!L", crc)

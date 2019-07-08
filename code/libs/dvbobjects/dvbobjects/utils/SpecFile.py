@@ -30,7 +30,7 @@ class SuperGroupSpec(DVBobject):
 
         items = string.split(file.readline())
         self.transactionId = eval(items[0])
-	self.version       = eval(items[1])
+        self.version       = eval(items[1])
         fn = items[1]
         if fn == "None":
             self.srg_ior = None
@@ -80,7 +80,7 @@ class GroupSpec(DVBobject):
         #print repr(items[0])
         diiSpecFile        = open(items[0])
         self.transactionId = eval(items[1])
-	self.version       = eval(items[2])
+        self.version       = eval(items[2])
         self.downloadId    = eval(items[3])
         if len(items) == 6:
             self.assocTag      = eval(items[4])

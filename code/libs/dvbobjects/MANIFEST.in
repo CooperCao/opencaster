@@ -1,0 +1,2 @@
+include *.so
+recursive-include dvbobjects/utils *.so

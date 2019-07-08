@@ -60,7 +60,7 @@ class channel_loop_item(DVBobject):
 	
 		assert len(self.short_name) == 14 #bytes -> 7*16 bit, 7 utf-16 chars
 	
-	# pack event_descriptor_loop
+        # pack event_descriptor_loop
 		dl_bytes = string.join(
 			map(lambda x: x.pack(),
 			self.descriptors_loop),

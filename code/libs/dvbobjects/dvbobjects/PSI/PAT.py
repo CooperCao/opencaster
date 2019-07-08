@@ -38,7 +38,7 @@ class program_association_section(Section):
             "")
 
         self.table_id_extension = self.transport_stream_id # ???
-	self.private_indicator = 0
+        self.private_indicator = 0
 
         fmt = "!%ds" % (len(pl_bytes))
         return pack(fmt,
@@ -52,7 +52,7 @@ class program_loop_item(DVBobject):
     
         # pack program_loop_item
         fmt = "!HH"
-	return pack(fmt,
-	    self.program_number,
-	    0xE000 | (self.PID & 0x1FFF),
-	)
+        return pack(fmt,
+            self.program_number,
+            0xE000 | (self.PID & 0x1FFF),
+        )
